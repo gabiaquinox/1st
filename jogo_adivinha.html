@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+var pulaLinha = function(){
+	document.write("<br>");
+}
+	
+	// Função para exibir frase e quebrar linha
+var mostra = function(frase){
+	document.write(frase);
+	pulaLinha();
+	pulaLinha();
+}
+</script>
+
+<script>
+var numeroPensadoComCasasDecimais = Math.random() * 100;
+var numeroPensado = Math.round(numeroPensadoComCasasDecimais);
+
+var n = 1;
+
+for (n; n <= 3; n++){
+	var chute = prompt("Já pensei. Qual número você acha que é?");
+
+	if (chute == numeroPensado){
+		mostra("Uau! Você acertou! O nº pensado foi: " + numeroPensado);
+		break;
+	} else {
+		mostra("Que pena! Você errou!");// Eu tinha pensado no nº: " + numeroPensado);
+	
+		if (chute > numeroPensado) {
+			mostra ("O seu chute foi maior que o número que pensei!");
+		} else {
+			mostra ("O seu chute foi menor que o número que pensei!");
+		}
+	}
+
+}
+
+</script>

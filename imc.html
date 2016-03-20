@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+	var pulaLinha = function(){
+		document.write("<br>");
+	}
+	
+	// Função para exibir frase e quebrar linha
+	var mostra = function(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	var calculaIMC = function (peso, altura){
+		var imc = peso / (altura * altura);
+		
+		//Calcular diferença para obesidade severa
+		var diferenca = 35 - imc;
+		
+		//mostra("Você esta " + diferenca + " pontos longe de uma obesidade severa");
+		
+		return imc;
+	}
+
+	var peso = prompt("Qual seu peso?");
+	var altura = prompt("Qual sua altura?");
+	var meuIMC = calculaIMC(peso, altura);
+	
+	mostra("Seu IMC: " + meuIMC);
+	
+	if (meuIMC < 18.5){
+		mostra("Você esta ABAIXO do peso");
+	}
+	
+	if (meuIMC > 35){
+		mostra("Você esta ACIMA do peso");
+	}
+	
+	if (meuIMC >= 18.5 && meuIMC <= 35){
+			mostra ("Seu IMC esta OK!");
+	}
+	
+	var pesoFicticio = 70;
+	var alturaFicticia = 1.80;
+	//var imcFicticio = 
+	calculaIMC(pesoFicticio, alturaFicticia);
+	
+</script>

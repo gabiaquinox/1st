@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<script>
+var mostra = function(frase){
+	document.write(frase + "<br>");
+}
+
+var qtdAcertos = function(jogados, sorteados){
+	var acertos = 0;
+	
+	for (var i = 0; i < 6; i++){
+		for (var j = 0; j < 6; j++){
+			if (jogados[i] == sorteados[j]){
+				acertos++;
+			}
+		}
+	}
+	
+	return acertos;
+}
+
+alert ("Escolha 6 números da loteria!");
+var numJogados = [];
+
+for (var i = 0; i < 6; i++){
+	numJogados[i] = parseInt(prompt("Escolha o " + (i+1) + " numero:"));
+}
+
+alert ("Muito bem! Agora vamos aos sorteados!");
+
+var numSorteados = [];
+for (var i = 0; i < 6; i++){
+	numSorteados[i] = Math.round(Math.random() * 60);
+}
+
+var acertos = qtdAcertos(numJogados, numSorteados);
+
+mostra("Num escolhidos: " + numJogados);
+mostra("Num sorteados: " + numSorteados);
+mostra("Qtd. acertos: " + acertos)
+
+</script>

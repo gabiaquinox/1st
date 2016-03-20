@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+	var pulaLinha = function(){
+		document.write("<br>");
+	}
+	
+	// Função para exibir frase e quebrar linha
+	var mostra = function(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var nome = prompt("Oi, qual seu nome?");
+	mostra ("Bem vindo, " + nome);
+	
+	var idade = prompt("Qual sua idade?");
+	var dias = idade * 365;
+	var batimentos = dias * 24 * 60 * 80;
+	
+	mostra ("Você já viveu " + dias + " dias");
+	mostra ("Seu coração já bateu, aproximadamente " + batimentos + " vezes");
+	
+</script>

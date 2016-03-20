@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+
+// Função para exibir frase e quebrar linha
+var mostra = function(frase){
+	document.write(frase + "<br>");
+}
+
+var anoOlimpiadas = 1896;
+var anoLimite = prompt("Qual o ano limite?");
+
+while (anoOlimpiadas <= anoLimite){
+	mostra(anoOlimpiadas + " tem olimpiada!");
+	anoOlimpiadas = anoOlimpiadas + 4;
+}
+
+mostra("Ufa! Esses foram os anos de olimpiada até " + anoLimite);
+
+</script>

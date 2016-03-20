@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+	var pulaLinha = function(){
+		document.write("<br>");
+	}
+	
+	// Função para exibir frase e quebrar linha
+	var mostra = function(frase){
+		document.write(frase);
+		pulaLinha();
+		pulaLinha();
+	}
+	
+	var calculaPontos = function(vitorias, empates){
+		return (vitorias * 3) + empates;
+	}
+	
+	var vitoriasST = parseInt(prompt("Qts jogos seu time venceu?"));
+	var empatesST = parseInt(prompt("Qts jogos seu time empatou?"));
+	
+	var pontosSeuTime = calculaPontos(vitoriasST, empatesST);
+	
+	var vitoriasOT = parseInt(prompt("Qts jogos o outro time venceu?"));
+	var empatesOT = parseInt(prompt("Qts jogos o outro time empatou?"));
+	
+	var pontosOutroTime = calculaPontos(vitoriasOT, empatesOT);
+	
+	if(pontosSeuTime > pontosOutroTime){
+		mostra ("Seu time esta melhor que o outro time!")
+	}
+	
+	if(pontosSeuTime < pontosOutroTime){
+		mostra ("Seu time esta pior que o outro time!")
+	}
+	
+	if(pontosSeuTime == pontosOutroTime){
+		mostra ("Seu time esta empatado com o outro time!")
+	}
+	
+</script>

@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+
+// Função para exibir frase e quebrar linha
+var mostra = function(frase){
+	document.write(frase + "<br>");
+}
+
+var anoComoTexto = prompt("Qual o ano inicial?");
+var anoDeCopa = parseInt(anoComoTexto);
+var anoLimite = prompt("Qual o ano limite?");
+
+while (anoDeCopa <= anoLimite){
+	mostra(anoDeCopa + " tem copa!");
+	anoDeCopa = anoDeCopa + 4;
+}
+
+mostra("Ufa! Esses foram os anos de copa até " + anoLimite);
+
+</script>

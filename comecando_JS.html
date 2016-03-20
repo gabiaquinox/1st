@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+	var pulaLinha = function(){
+		document.write("<br>");
+	}
+	
+	// Função para exibir frase e quebrar linha
+	var mostra = function(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var ano = 2016;
+	var eu = 23;
+	var vovo = 73;
+	var mae = 48;
+	var total = eu + vovo + mae;
+	var media = total / 3;
+	
+	mostra("olá mundo!");	
+	mostra("esse é meu 2º programa!");
+	
+	mostra("Eu nasci em: " + (ano - eu));
+	mostra("Vovó nasceu em: " + (ano - vovo));
+	mostra("Mãe nasceu em: " + (ano - mae));
+	
+	mostra("A soma das idades é: " + total);
+	mostra("A media das idades é: " + media);
+	
+	var diferencaIdade = vovo - eu;
+	mostra ("A diferenca de idade entre eu e vovo é: " + diferencaIdade);
+	pulaLinha();
+	
+	mostra("<h3>Diferença das gerações</h3>");
+	var idadeMediaQuandoTemFilho = 28;
+	var diferencaAnos = ano - 1500;
+	var qtdGeracoes = diferencaAnos / idadeMediaQuandoTemFilho;
+	
+	mostra("Com a média de " + idadeMediaQuandoTemFilho + " anos, já se passaram " +  Math.round(qtdGeracoes) + " desde 1500.");
+	
+	console.log("teste");
+</script>
