@@ -1,0 +1,40 @@
+<canvas id="tela" width="600" height="400">
+</canvas>
+
+<script>
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+c.fillStyle = "brown";
+c.fillRect(0,0,600,400);
+
+var desenhaBolasRosas = function(evento){
+	var x = evento.pageX - tela.offsetLeft;
+	var y = evento.pageY - tela.offsetTop;
+	
+	c.fillStyle = "pink";
+	c.beginPath();
+	c.arc(x,y,10,0,2*3.14);
+	c.fill();
+	
+	console.log("Posição do clique: " + x + ", " + y);
+}
+
+var desenhaBolasRoxas = function(evento){
+	evento.preventDefault();
+	
+	var x = evento.pageX - tela.offsetLeft;
+	var y = evento.pageY - tela.offsetTop;
+	
+	c.fillStyle = "purple";
+	c.beginPath();
+	c.arc(x,y,10,0,2*3.14);
+	c.fill();
+	
+	console.log("Posição do clique: " + x + ", " + y);
+}
+
+tela.onclick = desenhaBolasRosas;
+tela.oncontextmenu = desenhaBolasRoxas;
+
+</script>
